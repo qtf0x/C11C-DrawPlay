@@ -28,6 +28,18 @@ public class Cat {
 		Graphics2D g2 = (Graphics2D) g;
 		int x=catX;
 		int y=catY;
+
+		g2.setColor(Color.black);
+		g2.drawLine(x+50, y+50, x+50, y+180);
+		g2.rotate(0.5);
+		g2.drawLine(x+120, y+50, x+50, y+100);
+		g2.rotate(-0.5);
+		g2.drawLine(x+120, y+100, x+50, y+130);
+
+		g2.rotate(0.5);
+		g2.drawLine(x+150, y+100, x+50, y+190);
+		g2.rotate(-0.5);
+		g2.drawLine(x+120, y+210, x+50, y+180);
 		// Draw one ear
 		Polygon p1 = new Polygon();
 		p1.addPoint(x + 30, y + 15);
