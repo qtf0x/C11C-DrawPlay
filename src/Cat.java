@@ -26,6 +26,23 @@ public class Cat {
 		Graphics2D g2 = (Graphics2D) g;
 		int x=catX;
 		int y=catY;
+		// Draw one ear
+		Polygon p1 = new Polygon();
+		p1.addPoint(x + 30, y + 15);
+		p1.addPoint(x + 8, y + 40);
+		p1.addPoint(x - 40, y - 30);
+		g2.setColor(Color.orange);
+		g2.fillPolygon(p1);
+		g2.drawPolygon(p1);
+		// Draw the other ear
+		x += HEAD_DIMENSION;
+		Polygon p2 = new Polygon();
+		p2.addPoint(x - 30, y + 15);
+		p2.addPoint(x - 8, y + 40);
+		p2.addPoint(x + 40, y - 30);
+		g2.fillPolygon(p2);
+		g2.drawPolygon(p2);
+		x -= HEAD_DIMENSION;
 		// Draw the head
 		g2.setColor(Color.black);
 		g2.fillOval(x, y, HEAD_DIMENSION, HEAD_DIMENSION);
