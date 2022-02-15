@@ -49,11 +49,20 @@ public class Cat {
 		g2.setColor(Color.MAGENTA);
 		g2.fillOval(x, y, HEAD_DIMENSION, HEAD_DIMENSION);
 		// Draw the eyes
-		g2.setColor(Color.green);
+		g2.setColor(Color.darkGray);
 		x = catX + EYE_X; 
 		y = catY + EYE_Y;
+		g2.rotate(0.5, x, y);
+		g2.fillRect(x, y - 15, 15, 5);
+		g2.rotate(-0.5, x, y);
+		g2.setColor(Color.green);
 		g2.fillOval(x, y, EYE_HEIGHT, EYE_HEIGHT);
 		x += EYE_SEPARATION;
+		g2.setColor(Color.darkGray);
+		g2.rotate(-0.5, x, y);
+		g2.fillRect(x, y-10, 15, 5);
+		g2.rotate(0.5, x, y);
+		g2.setColor(Color.green);
 		g2.fillOval(x, y, EYE_HEIGHT, EYE_HEIGHT);
 
 		g2.setColor(Color.black);
