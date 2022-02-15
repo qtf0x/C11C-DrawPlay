@@ -74,12 +74,20 @@ public class Cat {
 		// Draw the mouth
 		g2.setColor(Color.pink);
 		x = catX + MOUTH_X;
-		y = catY + MOUTH_Y;
+		y = catY + MOUTH_Y + 5;
 		g2.fillOval(x, y, MOUTH_WIDTH, MOUTH_HEIGHT);
+		// Draw the nose
 		g2.setColor(Color.black);
+		x += 7;
+		y -= 14;
+		g2.fillOval(x, y, MOUTH_HEIGHT, MOUTH_HEIGHT);
 		// Meow text appears below cat head, +10 places below 
 		// so it doesn't overlap the drawing
+<<<<<<< HEAD
 		g2.setFont(new Font("Arial Black", Font.BOLD, 20));
 		g2.drawString("MEOWWWWWWWW", catX, catY+HEAD_DIMENSION+10);	
+=======
+		g2.drawString("Meow, world!", catX, catY+HEAD_DIMENSION+10);	
+>>>>>>> 1845a6bce1b08f2081e1dddc66f1e5715692807f
 	}
 }
